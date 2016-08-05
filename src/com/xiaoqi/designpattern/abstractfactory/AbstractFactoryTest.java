@@ -1,8 +1,8 @@
 package com.xiaoqi.designpattern.abstractfactory;
 
 /**
- * ���󹤳�ģʽ
- * ��չ�ԽϺ�
+ * 抽象工厂模式
+ * 扩展性较好
  */
 public class AbstractFactoryTest {
 

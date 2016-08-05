@@ -8,8 +8,8 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 /**
- * Ô­ĞÍÄ£Ê½
- * ¹Ø¼üÊÇÊµÏÖsuper.clone()·½·¨£¬µ÷ÓÃObjectµÄclone·½·¨
+ * åŸå‹æ¨¡å¼
+ * å…³é”®æ˜¯å®ç°super.clone()æ–¹æ³•ï¼Œè°ƒç”¨Objectçš„cloneæ–¹æ³•
  */
 public class Prototype implements Cloneable,Serializable{
 
@@ -18,19 +18,19 @@ public class Prototype implements Cloneable,Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	//Ç³¿ËÂ¡
+	//æµ…å…‹éš†
 	protected Object clone() throws CloneNotSupportedException {
 		Prototype prototype = (Prototype) super.clone();
 		return prototype;
 	}
 	
-	//Éî¿ËÂ¡
+	//æ·±å…‹éš†
 	protected Object deepClone() throws IOException,ClassNotFoundException {
-        //½«¶ÔÏóĞòÁĞ»¯
+        //å°†å¯¹è±¡åºåˆ—åŒ–
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(bos);
         oos.writeObject(this);
-        //·´ĞòÁĞ»¯
+        //ååºåˆ—åŒ–
         ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
         ObjectInputStream ois = new ObjectInputStream(bis);
         return ois.readObject();

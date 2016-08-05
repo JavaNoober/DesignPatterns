@@ -1,7 +1,7 @@
 package com.xiaoqi.designpattern.proxy;
 /**
- * ´úÀíÄ£Ê½
- * ËüºÍ×°ÊÎÕßÄ£Ê½ºÜÏñ
+ * ä»£ç†æ¨¡å¼
+ * å®ƒå’Œè£…é¥°è€…æ¨¡å¼å¾ˆåƒ
  *
  */
 public class ProxyTest {

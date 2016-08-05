@@ -1,7 +1,7 @@
 package com.xiaoqi.designpattern.adapter;
 
 /**
- * 类适配器，通过继承和实现接口来关联
+ * 绫婚�傞厤鍣紝閫氳繃缁ф壙鍜屽疄鐜版帴鍙ｆ潵鍏宠仈
  *
  */
 public class ClassAdapter extends Current implements ITarget{

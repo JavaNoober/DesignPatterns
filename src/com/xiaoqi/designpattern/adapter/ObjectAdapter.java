@@ -1,6 +1,6 @@
 package com.xiaoqi.designpattern.adapter;
 /**
- * Í¨¹ıÎ¯ÅÉÀ´½øĞĞ¹ØÁª
+ * Í¨é€šè¿‡å§”æ´¾æ¥è¿›è¡Œå…³è”
  *
  */
 public class ObjectAdapter implements ITarget{

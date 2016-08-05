@@ -1,7 +1,7 @@
 package com.xiaoqi.designpattern.builder;
 
 public class CustomDialog {
-	//»ù±¾ÊôĞÔ
+	//åŸºæœ¬å±æ€§
 	private String title;
 	private String btnName;
 	private String content;
@@ -31,7 +31,7 @@ public class CustomDialog {
 		this.content = builder.content;
 	}
 	
-	//´´½¨Ò»¸öÄÚ²¿¾²Ì¬ÀàÓÃÓÚÉèÖÃÊôĞÔ£¬²¢ÇÒÓĞÒ»¸ö·µ»ØDialogµÄ·½·¨
+	//åˆ›å»ºä¸€ä¸ªå†…éƒ¨é™æ€ç±»ç”¨äºè®¾ç½®å±æ€§ï¼Œå¹¶ä¸”æœ‰ä¸€ä¸ªè¿”å›Dialogçš„æ–¹æ³•
 	public static class Builder{
 		private String title;
 		private String btnName;
@@ -52,7 +52,7 @@ public class CustomDialog {
 			return this;
 		}
 		
-		//·µ»ØDialog¶ÔÏó
+		//è¿”å›Dialogå¯¹è±¡
 		public CustomDialog build(){
 			return new CustomDialog(this);
 		}

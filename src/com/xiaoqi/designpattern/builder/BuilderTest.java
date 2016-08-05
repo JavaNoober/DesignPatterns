@@ -1,23 +1,23 @@
 package com.xiaoqi.designpattern.builder;
 /**
- * ½¨ÔìÕßÄ£Ê½
- * Óë¹¤³§Ä£Ê½²»Í¬µÄÊÇ£¬¶àÁËÒ»¸öDesigner£¬ÓÃÓÚ¹ÜÀíConcreteBuilder¡£¿ÉÒÔËµÊÇ½²¹¤³§Ä£Ê½Ç¿ÖÆ·ÖÀë¡£
- * Ò»°ãBuilderÀàÊÇ¶Ô¸÷¸ö×é¼şµÄ½¨Ôì£¬¶øDesignerÔòÊÇ¶Ô½¨Ôì¹ı³ÌµÄ¾ßÌå²Ù×÷¡£ÕâÖÖÄ£Ê½¶Ô·â×°ĞÔ¸üºÃ£¬ĞŞ¸ÄµÄÊ±ºòÎÒÃÇÖ»ĞèÒªĞÂ½¨Builder£¬¶ø²»ÓÃĞŞ¸ÄÖ®Ç°´úÂë£¬±£Ö¤ÁËÎÈ¶¨ĞÔ.
- * Í¬Ê±£¬µ±ÓĞºÜ¶àÊôĞÔĞèÒªÉèÖÃµÄÊ±ºò£¬ÓÃbuilderÄ£Ê½¾ÍºÜÇå³ş¡£
+ * å»ºé€ è€…æ¨¡å¼
+ * ä¸å·¥å‚æ¨¡å¼ä¸åŒçš„æ˜¯ï¼Œå¤šäº†ä¸€ä¸ªDesignerï¼Œç”¨äºç®¡ç†ConcreteBuilderã€‚å¯ä»¥è¯´æ˜¯è®²å·¥å‚æ¨¡å¼å¼ºåˆ¶åˆ†ç¦»ã€‚
+ * ä¸€èˆ¬Builderç±»æ˜¯å¯¹å„ä¸ªç»„ä»¶çš„å»ºé€ ï¼Œè€ŒDesigneråˆ™æ˜¯å¯¹å»ºé€ è¿‡ç¨‹çš„å…·ä½“æ“ä½œã€‚è¿™ç§æ¨¡å¼å¯¹å°è£…æ€§æ›´å¥½ï¼Œä¿®æ”¹çš„æ—¶å€™æˆ‘ä»¬åªéœ€è¦æ–°å»ºBuilderï¼Œè€Œä¸ç”¨ä¿®æ”¹ä¹‹å‰ä»£ç ï¼Œä¿è¯äº†ç¨³å®šæ€§.
+ * åŒæ—¶ï¼Œå½“æœ‰å¾ˆå¤šå±æ€§éœ€è¦è®¾ç½®çš„æ—¶å€™ï¼Œç”¨builderæ¨¡å¼å°±å¾ˆæ¸…æ¥šã€‚
  */
 public class BuilderTest {
 	public static void main(String[] args) {
-		//·½Ê½Ò»£º
+		//æ–¹å¼ä¸€ï¼š
 		IBuilder builder = new ConcreteBuilder();
 		Designer designer = new Designer();
 		designer.design(builder);
 		builder.getHome();
-		//·½Ê½¶ş£º
+		//æ–¹å¼äºŒï¼š
 		IBuilder2 builder2 = new ConcreteBuilder2();
 		Designer designer2 = new Designer();
 		designer2.design2(builder2);
 		builder2.getHome();
-		//·½Ê½Èı£º
+		//æ–¹å¼ä¸‰ï¼š
 		CustomDialog dialog =new CustomDialog.Builder()
 							.setBtnName("name")
 							.setTitle("title")

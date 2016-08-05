@@ -2,19 +2,19 @@ package com.xiaoqi.designpattern.adapter;
 
 public class AdpaterTest {
 	public static void main(String[] args) {
-		//ÀàÊÊÅäÆ÷£º
-		//Ã»ÓĞÊÊÅäÖ®Ç°
+		//ç±»é€‚é…å™¨ï¼š
+		//æ²¡æœ‰é€‚é…ä¹‹å‰
 		Target target = new Target();
 		target.TargetVoltage();
-		//ÊÊÅäÖ®ºó
+		//é€‚é…ä¹‹å
 		ClassAdapter classAdapter = new ClassAdapter();
 		classAdapter.TargetVoltage();
 		
-		//¶ÔÏóÊÊÅäÆ÷
+		//å¯¹è±¡é€‚é…å™¨
 		ObjectAdapter objectAdapter = new ObjectAdapter(new Current());
 		objectAdapter.TargetVoltage();
 		
-		//½Ó¿ÚÊÊÅäÆ÷
+		//æ¥å£é€‚é…å™¨
 		InterfaceAdapterRealize iar = new InterfaceAdapterRealize();
 		iar.getA();
 		iar.getB();

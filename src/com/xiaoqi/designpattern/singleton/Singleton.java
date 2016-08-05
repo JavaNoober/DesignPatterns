@@ -1,7 +1,7 @@
 package com.xiaoqi.designpattern.singleton;
 
 /**
- * 	����ģʽ
+ * 	单例模式
  *
  */
 public class Singleton {
@@ -11,13 +11,13 @@ public class Singleton {
 	public int id1;
 	public int id3;
 	/**
-	 *˽�й��췽������ֹ��ʵ����
-	 *��ʱע�͵�
+	 *私有构造方法，防止被实例化
+	 *暂时注释掉
 	 */
 	private Singleton() {
 	} 
 	
-	//�̲߳���ȫ
+	//线程不安全
 	public static Singleton getInstance1(){
 		if(singleton == null){
 			singleton = new Singleton();
@@ -26,7 +26,7 @@ public class Singleton {
 	}
 	
 	
-	//�̰߳�ȫ���������������½���ÿ��getInstance2()��Ҫ��������ʵ��ֻ�е�һ����Ҫ��֮��Ͳ���Ҫ�ˡ�
+	//线程安全但是性能上有所下降，每次getInstance2()都要加锁，事实上只有第一次需要，之后就不需要了。
 	public static synchronized Singleton getInstance2(){
 		if(singleton == null){
 			singleton = new Singleton();
@@ -35,16 +35,16 @@ public class Singleton {
 	}
 	
 	/**
-	 *  ���ã�
-	 *  a>A��B�߳�ͬʱ�����˵�һ��if�ж�
+	 *  引用：
+	 *  a>A、B线程同时进入了第一个if判断
 	 *
-	 *	b>A���Ƚ���synchronized�飬����instanceΪnull��������ִ��instance = new Singleton();
+	 *	b>A首先进入synchronized块，由于instance为null，所以它执行instance = new Singleton();
 	 *
-	 *	c>����JVM�ڲ����Ż����ƣ�JVM�Ȼ�����һЩ�����Singletonʵ���Ŀհ��ڴ棬����ֵ��instance��Ա��ע���ʱJVMû�п�ʼ��ʼ�����ʵ������Ȼ��A�뿪��synchronized�顣
+	 *	c>由于JVM内部的优化机制，JVM先画出了一些分配给Singleton实例的空白内存，并赋值给instance成员（注意此时JVM没有开始初始化这个实例），然后A离开了synchronized块。
 	 *
-	 *	d>B����synchronized�飬����instance��ʱ����null������������뿪��synchronized�鲢��������ظ����ø÷����ĳ���
+	 *	d>B进入synchronized块，由于instance此时不是null，因此它马上离开了synchronized块并将结果返回给调用该方法的程序。
 	 *
-	 *	e>��ʱB�̴߳���ʹ��Singletonʵ����ȴ������û�б���ʼ�������Ǵ������ˡ�
+	 *	e>此时B线程打算使用Singleton实例，却发现它没有被初始化，于是错误发生了。
 	 */
 	public static Singleton getInstance3(){
 		if(singleton == null){
@@ -58,8 +58,8 @@ public class Singleton {
 	}
 	
 	/**
-	 * ����ģʽʹ���ڲ�����ά��������ʵ�֣�JVM�ڲ��Ļ����ܹ���֤��һ���౻���ص�ʱ�������ļ��ع������̻߳���ġ����������ǵ�һ�ε���getInstance��ʱ��
-	 * JVM�ܹ������Ǳ�֤instanceֻ������һ�Σ����һᱣ֤�Ѹ�ֵ��instance���ڴ��ʼ�����
+	 * 单例模式使用内部类来维护单例的实现，JVM内部的机制能够保证当一个类被加载的时候，这个类的加载过程是线程互斥的。这样当我们第一次调用getInstance的时候，
+	 * JVM能够帮我们保证instance只被创建一次，并且会保证把赋值给instance的内存初始化完毕
 	 *
 	 */
 	public static class SingletonFactory{
@@ -71,7 +71,7 @@ public class Singleton {
 	}
 	
 	/**
-	 * �������Ҳ����
+	 * 这个方法也可以
 	 */
     private static synchronized void syncInit() {  
         if (singleton == null) {  

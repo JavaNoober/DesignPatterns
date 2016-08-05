@@ -3,7 +3,7 @@ package com.xiaoqi.designpattern.adapter;
 public class Target implements ITarget {
 
 	public void TargetVoltage() {
-		System.out.println("µçÆ÷µçÑ¹ÊÇ180V£¬²»ÄÜÊ¹ÓÃ220V");
+		System.out.println("ç”µå™¨ç”µå‹æ˜¯180Vï¼Œä¸èƒ½ä½¿ç”¨220V");
 	}
 
 }

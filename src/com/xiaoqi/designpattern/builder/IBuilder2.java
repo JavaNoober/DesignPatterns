@@ -2,7 +2,7 @@ package com.xiaoqi.designpattern.builder;
 
 
 public interface IBuilder2 {
-	//µ÷ÓÃ·½Ò²ÊÇ×Ô¼º,Ã¿´Î²Ù×÷Íêºó·µ»Ø¶ÔÏóÎª×Ô¼º
+	//è°ƒç”¨æ–¹ä¹Ÿæ˜¯è‡ªå·±,æ¯æ¬¡æ“ä½œå®Œåè¿”å›å¯¹è±¡ä¸ºè‡ªå·±
 	public IBuilder2 buildHouse();
 	public IBuilder2 buildCar();
 	public IBuilder2 buildRoom();

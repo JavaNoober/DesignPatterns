@@ -3,7 +3,7 @@ package com.xiaoqi.designpattern.factorymethod;
 public class OperatorFactory {
 	
 	/**
-	 * ÆÕÍ¨¹¤³§Ä£Ê½
+	 * æ™®é€šå·¥å‚æ¨¡å¼
 	 * @param type
 	 * @return
 	 */
@@ -19,7 +19,7 @@ public class OperatorFactory {
 	
 	/*---------------------------------------*/
 	/**
-	 * ¶à¸ö¹¤³§·½·¨Ä£Ê½
+	 * å¤šä¸ªå·¥å‚æ–¹æ³•æ¨¡å¼
 	 * 
 	 */
 	public IOperator produceSecond(){
@@ -33,7 +33,7 @@ public class OperatorFactory {
 	/*---------------------------------------*/
 	
 	/**
-	 * ¾²Ì¬¹¤³§Ä£Ê½
+	 * é™æ€å·¥å‚æ¨¡å¼
 	 * 
 	 */
 	

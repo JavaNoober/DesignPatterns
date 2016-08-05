@@ -3,23 +3,23 @@ package com.xiaoqi.designpattern.factorymethod;
 import java.util.BitSet;
 
 /**
- * ÆÕÍ¨¹¤³§Ä£Ê½
- * ·²ÊÇ³öÏÖÁË´óÁ¿µÄ¶ÔÏóĞèÒª´´½¨£¬²¢ÇÒ¾ßÓĞ¹²Í¬µÄ½Ó¿ÚÊ±£¬¿ÉÒÔÍ¨¹ı¹¤³§·½·¨Ä£Ê½½øĞĞ´´½¨
+ * æ™®é€šå·¥å‚æ¨¡å¼
+ * å‡¡æ˜¯å‡ºç°äº†å¤§é‡çš„å¯¹è±¡éœ€è¦åˆ›å»ºï¼Œå¹¶ä¸”å…·æœ‰å…±åŒçš„æ¥å£æ—¶ï¼Œå¯ä»¥é€šè¿‡å·¥å‚æ–¹æ³•æ¨¡å¼è¿›è¡Œåˆ›å»º
  */
 public class FactoryMethodTest {
 
 	public static void main(String[] args) {
-		//ÆÕÍ¨¹¤³§Ä£Ê½
+		//æ™®é€šå·¥å‚æ¨¡å¼
 		OperatorFactory factory = new OperatorFactory();
 		IOperator operator = factory.produce("first");
 		operator.operate();
 		
-		//¶à¸ö·½·¨¹¤³§Ä£Ê½
+		//å¤šä¸ªæ–¹æ³•å·¥å‚æ¨¡å¼
 		OperatorFactory factory2 = new OperatorFactory();
 		IOperator operator2 = factory2.produceFirst();
 		operator2.operate();
 		
-		//¾²Ì¬¹¤³§Ä£Ê½
+		//é™æ€å·¥å‚æ¨¡å¼
 		IOperator operator3 = OperatorFactory.getFirst();
 		operator3.operate();
 	}

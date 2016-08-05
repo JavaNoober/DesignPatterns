@@ -4,7 +4,7 @@ public class InterfaceAdapterRealize extends InterfaceAdapter{
 	
 	public void getA() {
 		super.getA();
-		System.out.println("只实现了A方法");
+		System.out.println("鍙疄鐜颁簡A鏂规硶");
 	}
 	
 }

@@ -1,7 +1,7 @@
 package com.xiaoqi.designpattern.adapter;
 
 public interface ITarget {
-	//µ±Ç°µÃµ½µÄµçÑ¹
+	//å½“å‰å¾—åˆ°çš„ç”µå‹
 	public void TargetVoltage();
 	
 }

@@ -15,10 +15,10 @@ public class ProxySettings implements IInternet {
 	}
 
 	private void settings(){
-		System.out.println("通过代理进行设置");
+		System.out.println("閫氳繃浠ｇ悊杩涜璁剧疆");
 	}
 	
 	private void settingAfter(){
-		System.out.println("成功访问google");
+		System.out.println("鎴愬姛璁块棶google");
 	}
 }
