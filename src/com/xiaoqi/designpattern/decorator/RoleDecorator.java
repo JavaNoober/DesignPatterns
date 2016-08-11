@@ -1,6 +1,5 @@
 package com.xiaoqi.designpattern.decorator;
 
-//装饰者
 public class RoleDecorator implements IRole {
 	IRole role;
 	
